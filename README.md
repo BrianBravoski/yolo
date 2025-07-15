@@ -2,8 +2,22 @@
 - docker
 - access to the docker images posted on docker hub
 - Mongodbor a Mongo Atlas database 
+- node js
 
-## This is a dockerized microservice application
+
+## Running the application without docker
+- Clone the repo from github : `https://github.com/BrianBravoski/yolo`
+- Navigate to the directory using `cd yolo`
+- Navigate to the front end application `cd client`
+- Install the node dependencies  using `npm install`
+- Start the service using `npm start`
+- Open another terminal
+- Navigate to the backend directory using `cd backend`
+- Set up the mongodb url correctly in the `server.js ` file
+- Install the node dependencies using `npm install`
+- Start the server using `node server.js`
+
+## Running as a dockerized microservice application
 
 ### Steps
 
