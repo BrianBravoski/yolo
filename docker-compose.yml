@@ -2,7 +2,7 @@ version: "1"
 services:
   client:
     build: ./client/
-    image: k3mboi/client:v1.0.0
+    image: k3mboi/client:v1.0.1
     container_name: yolo_client
     ports:
       - "3000:3000"
