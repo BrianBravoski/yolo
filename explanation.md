@@ -36,3 +36,7 @@
 - `COPY . .` - copy project source code inside the docker image.
 
 - `CMD ["node", "server.js"]` - starts the application.
+
+
+## Images on docker hub
+![Docker images on docker hub](docker_hub.png)
