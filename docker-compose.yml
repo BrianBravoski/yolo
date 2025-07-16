@@ -1,4 +1,4 @@
-version: "1"
+# version: "1"
 services:
   client:
     build: ./client/
@@ -19,9 +19,24 @@ services:
       - "5000:5000"
     networks:
       - yolo_network
+    depends_on:
+      - mongo
 
+  mongo:
+    image: mongo:latest
+    container_name: yolo_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - database_data:/data/db
+    networks:
+      - yolo_network
+    environment:
+      MONGO_INTDB_ROOT_USERNAME: BrianKemboi
+      MONGO_INTDB_ROOT_PASSWORD: KemboiAccess1
+      MONGO_INITDB_DATABASE: yolodb
 volumes:
-  backend_data:
+  database_data:
     driver: local
 
 networks:
