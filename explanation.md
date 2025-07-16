@@ -8,7 +8,7 @@
 
 #### client
 
--`FROM node:24-alpine3.21` - is the base image for the image
+-`FROM node:16.17.1-alpine3.16` - is the base image for the image
 
 - `RUN mkdir /client` - creates a directory for the client application
 
@@ -16,11 +16,13 @@
 
 -`COPY package.json package-lock.json ./` - copies the file dependencies into the working directory of the image.
 
+-`RUN npm run build` - build the application 
+
 - `RUN npm install` - installs the project dependencies.
 
 - `COPY . .` - copy project source code inside the docker image.
 
-- `CMD ["npm", "start"]` - specifies the image entry point.
+- `CMD ["serve", "-s", "build", "-l", "3000"]` - specifies the image entry point.
 
 
 ### backend
@@ -39,4 +41,8 @@
 
 
 ## Images on docker hub
+
 ![Docker images on docker hub](docker_hub.png)
+
+- This the link to the [yolo_client](https://hub.docker.com/r/k3mboi/client) image in dockerhub.
+- This the link to the [yolo_backend](https://hub.docker.com/r/k3mboi/backend) image in dockerhub.

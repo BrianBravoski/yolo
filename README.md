@@ -23,4 +23,4 @@
 
 - Clone the repo from github : `https://github.com/BrianBravoski/yolo`
 - Change the directory to the yolo directory using `cd yolo`
-- 
+- Run the `docker compose up --build -d` command to build and start your application.
