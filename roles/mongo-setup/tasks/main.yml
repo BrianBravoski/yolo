@@ -1,4 +1,10 @@
 ---
+- name: pull mongo image
+  community.docker.docker_image:
+    name: "{{ mongo_image }}"
+    tag: latest
+    source: pull
+
 - name: set up mongo db
   community.docker.docker_container:
     name: "{{ mongo_container_name }}"
