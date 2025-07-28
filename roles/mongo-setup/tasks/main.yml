@@ -1,0 +1,14 @@
+---
+- name: set up mongo db
+  community.docker.docker_container:
+    name: "{{ mongo_container_name }}"
+    image: "{{ mongo_image }}"
+    ports:
+      - "27017:27017"
+    volumes: 
+      - "{{ volumes }}"
+    env:
+      MONGO_INITDB_ROOT_USERNAME: "{{ mongo_root_username }}"
+      MONGO_INITDB_ROOT_PASSWORD: "{{ mongo_root_password }}"
+      MONGO_INITDB_DATABASE: "{{ mongo_initdb_database }}"
+  tags: mongo_setup

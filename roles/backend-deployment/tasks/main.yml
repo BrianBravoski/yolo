@@ -10,7 +10,6 @@
   community.docker.docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image }}"
-    networks:
-      - name: yolo_network
+
     ports:
       - "5000:5000"

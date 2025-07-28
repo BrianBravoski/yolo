@@ -10,7 +10,7 @@
   community.docker.docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image }}"
-    networks:
-      - name: yolo_network
     ports:
       - "3000:3000"
+    command: "npm start"
+  
