@@ -1,0 +1,9 @@
+---
+github_repository: "https://github.com/BrianBravoski/yolo"
+destination_directory: "/opt/yolo"
+packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+
+docker_gpg: "https://download.docker.com/linux/ubuntu/gpg"

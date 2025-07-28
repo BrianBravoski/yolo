@@ -3,6 +3,7 @@
     hosts: all
     become: true
     roles:
+      - packages_setup
       - backend-deployment
       - frontend-deployment
       - mongo-setup

@@ -1,0 +1,26 @@
+---
+- name: install git
+  ansible.builtin.apt:
+    name: git
+    state: present  
+
+- name: clone the repository
+  ansible.builtin.git:
+    repo: "{{ github_repository }}"
+    dest: "{{ destination_directory }}"
+
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: "{{ docker_gpg }}"
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: install dependencies
+  ansible.builtin.apt:
+    name: "{{ packages }}"
+    update_cache: true
+  become: true
