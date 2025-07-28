@@ -1,0 +1,16 @@
+--- 
+- name: pull backend code
+  community.docker.docker_image:
+    name: "{{docker_image}}"
+    tag: latest
+    source: pull
+
+
+- name: run backend container
+  community.docker.docker_container:
+    name: "{{ container_name }}"
+    image: "{{ docker_image }}"
+    networks:
+      - name: yolo_network
+    ports:
+      - "5000:5000"

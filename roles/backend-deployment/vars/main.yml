@@ -1,0 +1,5 @@
+---
+
+container_name: yolo-backend
+docker_image: k3mboi/backend:v1.0.0
+networks: yolo_network

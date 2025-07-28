@@ -1,0 +1,6 @@
+---
+ -  name: Playbook to dockerize and  application
+    hosts: localhost
+    become: true
+    roles:
+      - backend-deployment
