@@ -1,8 +1,7 @@
 ---
 mongo_container_name: yolo_mongo
 mongo_image: mongo:latest
-volumes:
-  - database_data:/data/db
+volumes: database_data:/data/db
 mongo_root_username: BrianKemboi
 mongo_root_password: KemboiAccess1
 mongo_initdb_database: yolodb
