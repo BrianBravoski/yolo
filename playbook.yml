@@ -4,3 +4,5 @@
     become: true
     roles:
       - backend-deployment
+      - frontend-deployment
+      - mongo-deployment
