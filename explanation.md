@@ -1,16 +1,6 @@
 ## Docker File Explanation
 
-<<<<<<< HEAD
 ### Choice of Base image
-- Used `node:24-alpine3.21` as the main base image because of it's small size
-=======
-### Choice of Base Image
->>>>>>> f8ee9dfdf9f27482f19b4041e0daafcfbf4bf98f`
-
-<<<<<<<updating explanati<<<<<<<updating explanation.md
-
-###     
-=======
 - Used `node:24-alpine3.21` as the main base image for both Dockerfile 
 
 ### Dockerfile directives
@@ -55,4 +45,6 @@
 
 - This the link to the [yolo_client](https://hub.docker.com/r/k3mboi/client) image in dockerhub.
 - This the link to the [yolo_backend](https://hub.docker.com/r/k3mboi/backend) image in dockerhub.
->>>>>>> f8ee9dfdf9f27482f19b4041e0daafcfbf4bf98f
+
+
+## Running the 
