@@ -4,12 +4,24 @@
     name: "{{docker_image}}"
     tag: latest
     source: pull
+  tag: ['backend_deployment']
 
 
 - name: run backend container
   community.docker.docker_container:
     name: "{{ container_name }}"
     image: "{{ docker_image }}"
-
+    networks:
+      - name: "{{ network_name }}"
     ports:
       - "5000:5000"
+  tag: ['backend_deployment']
+
+- name: wait for backend to be ready
+  ansible.builtin.wait_for:
+    port: 5000
+    delay: 15
+    timeout: 120
+    state: started
+    host: "127.0.0.1"
+  tag: ['backend_deployment']

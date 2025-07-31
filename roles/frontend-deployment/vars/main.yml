@@ -2,4 +2,4 @@
 
 container_name: yolo-frontend
 docker_image: k3mboi/client:v1.0.1
-networks: yolo_network
+network_name: yolo_network
