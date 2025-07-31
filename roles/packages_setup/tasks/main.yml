@@ -30,3 +30,10 @@
     state: present
   become: true
   tag: ['packages_setup']
+
+- name: Create Docker network for application
+  docker_network:
+    name: "{{ network_name }}"
+    state: present
+  tag: ['network_setup']
+        

@@ -6,3 +6,4 @@ mongo_root_username: BrianKemboi
 mongo_root_password: KemboiAccess1
 mongo_initdb_database: yolodb
 tags: mongo_setup
+network_name: yolo_network

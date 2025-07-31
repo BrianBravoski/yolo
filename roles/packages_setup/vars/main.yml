@@ -7,3 +7,4 @@ packages:
   - containerd.io
 
 docker_gpg: "https://download.docker.com/linux/ubuntu/gpg"
+network_name: yolo_network
