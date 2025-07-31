@@ -4,6 +4,7 @@
     become: true
     roles:
       - packages_setup
+      - mongo-setup
       - backend-deployment
       - frontend-deployment
-      - mongo-setup
+      
