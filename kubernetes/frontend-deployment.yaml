@@ -1,3 +1,4 @@
+## front edn deployment manifest
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: k3mboi/yolo-frontend:latest
+        image: k3mboi/client:v1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
