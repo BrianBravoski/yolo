@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: k3mboi/backend:v1.0.0
+        image: k3mboi/backend:v1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -33,4 +33,19 @@ spec:
           limits:
             memory: "512Mi"
             cpu: "500m" 
+
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+    app: backend
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 5000
+  selector:
+    app: backend
+    tier: backend
