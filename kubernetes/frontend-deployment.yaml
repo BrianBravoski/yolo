@@ -35,6 +35,7 @@ spec:
             cpu: "500m"
       
 ---
+## front end service manifest
 apiVersion: v1
 kind: Service
 metadata:
