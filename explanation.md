@@ -47,4 +47,18 @@
 - This the link to the [yolo_backend](https://hub.docker.com/r/k3mboi/backend) image in dockerhub.
 
 
-## Running the 
+## Running the Microservice on Kubernets
+
+### running it on local
+
+- You can run the microservice using the `minicube` and `kubectl` applications locally
+
+- Make sure your kubernetes manifests are created and refer to `docker images` that are accessible on `dockerhub`.
+
+- create the kubernetes pods by running ` kubectl apply -f backend-deployment.yaml ` for the backend.
+- create the kubernetes pods by running ` kubectl apply -f frontend-deployment.yaml ` for the frontend.
+- create the kubernetes pods by running ` kubectl apply -f db_stateful.yaml ` for the mongodb and the **Statefulset** functionality.
+
+- use `kubectl get pods` to check the progress and the status of the pods.
+
+- check the logs of the kubernetes to check any errors and for debugging purposes. `kubectl logs backend-deployment-764f6764ff-6cgfv`
