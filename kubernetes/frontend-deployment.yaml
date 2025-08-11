@@ -1,4 +1,4 @@
-## front edn deployment manifest
+## front end deployment manifest
 apiVersion: apps/v1
 kind: Deployment
 metadata:
