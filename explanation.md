@@ -89,3 +89,9 @@ kubectl apply -f backend-deployment.yaml
 kubectl apply -f frontend-deployment.yaml
 ```
 - check on the status of the pods using `kubectl get pods`
+
+- Checking the running pods and services on GKE cloud shell console. 
+- ![Cloud Shell](GKE.png)
+- Public IP for the front end : http://34.169.47.179
+- Public IP for the backend:
+http://34.19.82.253
