@@ -63,6 +63,8 @@
 
 - check the logs of the kubernetes to check any errors and for debugging purposes. `kubectl logs backend-deployment-764f6764ff-6cgfv`
 
+![Kubernetes pods running locally](kubernetes.png)
+
 ### Setting it up on Google Cloud
 
 - Ensure you have a Google Cloud Console, you can utilize the free 300$ , 90 day trial period to create the Kubernetes cluster and run the microservice.
@@ -86,3 +88,4 @@ kubectl apply -f db_stateful.yaml
 kubectl apply -f backend-deployment.yaml
 kubectl apply -f frontend-deployment.yaml
 ```
+- check on the status of the pods using `kubectl get pods`
