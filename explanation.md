@@ -49,7 +49,7 @@
 
 ## Running the Microservice on Kubernets
 
-### running it on local
+### running it on locally
 
 - You can run the microservice using the `minicube` and `kubectl` applications locally
 
@@ -62,3 +62,27 @@
 - use `kubectl get pods` to check the progress and the status of the pods.
 
 - check the logs of the kubernetes to check any errors and for debugging purposes. `kubectl logs backend-deployment-764f6764ff-6cgfv`
+
+### Setting it up on Google Cloud
+
+- Ensure you have a Google Cloud Console, you can utilize the free 300$ , 90 day trial period to create the Kubernetes cluster and run the microservice.
+- Utilize the **cloudshell** to run the commands.
+- Run `gcloud auth list` and  `gcloud config list project` to confirm the cloud account and project ID.
+- set the compute zone and region:
+    ```bash
+    gcloud config set compute/zone useast-1
+      
+    ```
+- set up a cluster:
+    `gcloud container clusters create io --zone us-central1`
+
+- clone the repo to the cloud shell console
+ `git clone https://github.com/BrianBravoski/yolo.git `
+
+- deploy the manifests using the same commands as the local cloud:
+
+```bash
+kubectl apply -f db_stateful.yaml 
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f frontend-deployment.yaml
+```
